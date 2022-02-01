@@ -1,0 +1,64 @@
+header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+body{
+    background-image: url("../images/book1.jpeg");
+}
+.div1{
+    display: flex;
+  /* align-items: stretch; */
+  /* background-color: darksalmon; */
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  width: 100%;
+  height:450px;
+}
+/* .div1 > div {
+  background-color: darksalmon;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+} */
+  .d1{
+     width:30%;
+    height:450px;
+    background-color: skyblue;
+
+}
+  #d2{
+     width:40%;
+    height:450px;
+    /* background-color: yellow; */
+
+}
+.d3{
+     width:30%;
+    height:450px;
+    background-color:skyblue;
+    font-style: oblique;
+   
+}
+.Option{
+    width: 200px;
+    height: 100px;
+    font-style: oblique;
+    font-size: 80;
+    text-align: right;
+    margin-top: 10%;
+    margin-left: 10%
+    /* background-color: darksalmon; */
+}
+footer{
+     position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}

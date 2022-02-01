@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Options.css">
+</head>
+<body>
+    <!-- <header><h1>Book Management System</h1></header>
+    <h2>Enter Book Details </h2> -->
+    <div class="d1">
+        <form>
+            <div class="inputs"> 
+                <label for="Bname">Book Name</label>
+                <input type="text" id="Bname">
+            </div><br>
+            <div class="inputs">
+                <label for="id">Book Id</label>
+                <input type="number" id="id">
+            </div><br>
+            <div class="inputs">
+                <label for="auth">Book Author</label>
+                <input type="text" id="auth"></div><br>
+            <div class="inputs">
+                <label for="Bprice">Book Price</label>
+                <input type="number" id="Bprice">
+            </div><br>
+            <div class="inputs">
+                <label for="Qua">Book Quantity</label>
+                <input type="number" id="Qua">
+            </div><br>
+            <div><button onclick="saveBookDetails()">Submit</button></div>
+            <div><p id="result"></p></div>
+        </form>
+    </div>
+    
+</body>
+<!-- <div><footer>All CopyRights Reserved to Owner</footer></div> -->
+<script>
+        var bname = document.getElementById('Bname');
+        var bid = document.getElementById('id');
+        var author = document.getElementById('auth');
+        var price = document.getElementById('Bprice');
+        var quantity = document.getElementById('Qua');
+        var BookArray={bn:'ab',id:'1',ar:"ds",pr:200,qu:2};
+        BookArray["bn"]=bname;
+        BookArray["id"]=bid;
+        BookArray["ar"]=author;
+        BookArray["pr"]=price;
+        BookArray["qu"]=quantity;
+        console.log(BookArray);
+        function saveBookDetails() {
+            if(BookArray.length!=0){
+                document.getElementById('result').innerHTML="Book details are added Successfully"
+            }
+            else{
+                document.getElementById('result').innerHTML="Book details are not added "
+            }
+    }
+</script>
+</html>

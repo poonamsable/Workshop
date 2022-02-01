@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Book Management System</h1></header>
+    <div class="div1">
+        <div class="d1">
+        <div class="Option" onclick="add()">Add Book</div>
+        <div class="Option" onclick="Remove()">Remove Book</div>
+        <div class="Option" onclick="Edit()">Edit Book</div>
+        </div><br>
+        <div id="d2">
+
+        </div>
+        <div class="d3">
+            <p>Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers</p>
+        </div>
+    </div>
+</body>
+<div><footer>All CopyRights Reserved to Owner</footer></div>
+<script>
+    function add() {
+     document.getElementById("d2").innerHTML='<object type="text/html" data="AddBook.html" style="    height: 100%; width:100%" ></object>';
+}
+function Remove() {
+     document.getElementById("d2").innerHTML='<object type="text/html" data="RemoveBook.html" style="    height: 100%; width:100%" ></object>';
+}
+function Edit() {
+     document.getElementById("d2").innerHTML='<object type="text/html" data="EditBook.html" style="    height: 100%; width:100%" ></object>';
+}
+</script>
+</html>
