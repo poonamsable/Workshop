@@ -1,0 +1,130 @@
+//desktop
+@mixin parent($dis,$col,$bcolor,$gap){
+    display: $dis;
+        grid-template-columns: $col ;
+        background-color:$bcolor;
+        grid-gap: $gap;
+}
+    @mixin parentDiv($bcolor,$fs,$tx,$bo){
+        background-color:$bcolor;
+        font-size: $fs;
+        text-align: $tx;
+        border: $bo;
+    }
+.navb {
+  overflow: hidden;
+  background-color:black;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.navb button {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:black;
+  font-size: 17px;
+  border: transparent;
+  
+//   margin-bottom: 20px;
+}
+header {
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+@media (min-width: 978px){
+    .parent {
+        // display: grid;
+        // grid-template-columns: auto auto ;
+        // background-color:darkmagenta;
+        // grid-gap: 20px;
+        @include parent(grid,1fr 3fr,darkmagenta,20px);
+    
+    }
+    
+    img{
+        align-self: center;
+    }
+    .parent > div {
+        // background-color:deeppink;
+        // font-size: 32px;
+        // text-align: left;
+        // border: 0.1vw solid black;
+        @include parentDiv(deeppink,32px,left,0.1vw solid black);
+    }
+
+}
+@media (min-width: 1200px){
+    .parent {
+        // display: grid;
+        // background-color:cadetblue;
+        // grid-template-columns: 1fr 2fr;
+        grid-auto-rows: minmax(100px, auto);
+        @include parent(grid,1fr 3fr,cadetblue,20px)
+    
+    }
+    .titl{
+        column-span: 2;
+    }
+    img{
+        align-self: center;
+    }
+    .parent > div {
+        background-color:aquamarine;
+        text-align: left;
+        font-size: 32px;
+        border: 0.1vw solid black;
+    }
+}
+@media only screen and (max-width: 768px) {
+    width:100%;
+    .navb {
+    overflow: hidden;
+    background-color:black;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+    .parent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    background-color: grey;
+    padding: 2em;
+  }
+  img{
+        align-self: center;
+        width: 50%;
+    }
+  .parent > div {
+    background-color: darkgray;
+    text-align: left;
+    padding: 2vw 0;
+    width: 300px;
+    font-size: 20px;
+    border: 0.1vw solid black;
+  }
+}
+@media only screen and (min-width: 797px) {
+  .parent {
+    display: -ms-grid;
+    display: grid;
+    background-color: antiquewhite;
+  }
+  .parent > div {
+    background-color: blanchedalmond;
+    text-align: center;
+    width: 860px;
+    padding: 2vw 0;
+    font-size: 32px;
+    border: 0.1vw solid black;
+  }
+}
